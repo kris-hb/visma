@@ -1,0 +1,30 @@
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    margin: 10px;
+}
+
+.error-container {
+    padding-top: 5rem;
+    color: red;
+    &::before {
+        content: "\26a0";
+        color: rgb(163, 13, 13);
+        font-size: 1.5em;
+    }
+}
+
+button {
+    text-transform: uppercase;
+}
+
+app-currency-table {
+    padding-top: 5rem;
+}
+
+mat-progress-bar {
+    position: absolute;
+}
