@@ -1,0 +1,9 @@
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+
+<div class="main-container">
+    <button mat-raised-button color="primary" (click)="onButtonClick()">get exchange rates</button>
+    <div class="error-container" *ngIf="errorMessage">
+        {{errorMessage}}
+    </div>
+    <app-currency-table  [data]="(rates | async)" (loading)="onLoaded($event)"></app-currency-table>
+</div>
